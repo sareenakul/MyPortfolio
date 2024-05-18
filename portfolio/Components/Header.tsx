@@ -29,7 +29,7 @@ function Header({}: Props) {
                 <SocialIcon url='http://medleydiaries.com' fgColor='gray' bgColor='transparent'/>
         </animated.div>
         <animated.div style={rightSpring} className='flex flex-row items-center cursor-pointer'>
-            <SocialIcon className='cursor-pointer' network='email' fgColor='gray' bgColor='transparent'/>
+            <SocialIcon url='mailto:akuls18@my.yorku.ca' className='cursor-pointer' network='email' fgColor='gray' bgColor='transparent'/>
             <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get In Touch</p>
         </animated.div>
     </header>
