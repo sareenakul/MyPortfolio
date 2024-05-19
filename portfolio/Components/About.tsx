@@ -27,6 +27,10 @@ const About = (props: Props) => {
             <Image src={akul} alt="Akul" className='-mb-20 md:mb-0 flex-shrink w-56 h-56 rounded-full object-cover
             md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]' />
         </motion.div>
+
+        <div className='space-y-10 px-0 md:px-10'>
+            <h4 className='text-4xl font-semibold'>A little background</h4>
+        </div>
     </div>
   )
 }
