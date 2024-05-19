@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'
+import React from 'react';
 import akul from "../public/Akul.jpeg";
 import Image from 'next/image';
 import {motion} from "framer-motion";
@@ -26,19 +26,18 @@ const About = (props: Props) => {
         }}
         transition={{
             duration: 1.2,
-            // ease: 'easeOut',
         }}
         whileInView={{
             x: 0,
             opacity: 1,
         }}
-        // viewport={{once: true}}
+        className='flex-shrink-0 w-full md:w-auto' // Ensure the image container doesn't shrink
         >
-            <Image src={akul} alt="Akul" className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover
+            <Image src={akul} alt="Akul" className='-mb-20 md:mb-0 w-56 h-56 rounded-full object-cover
             md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]' />
         </motion.div>
 
-        <div className='space-y-10 px-0 md:px-10'>
+        <div className='space-y-10 px-0 md:px-10 flex-1'> {/* Add flex-1 to allow this div to take remaining space */}
             <h4 className='text-4xl font-semibold'>A <span className='underline decoration-[#F7AB0A]/50'>little</span>{" "} background</h4>
             <p className='text-base'>
                 I'm Akul. Mostly known for my infamous Canadian vlogs on my channel medleydiaries. Currently, I am persuing my 3rd year at YorkU in 
@@ -51,4 +50,4 @@ const About = (props: Props) => {
   )
 }
 
-export default About
+export default About;
