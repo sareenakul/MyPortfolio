@@ -1,4 +1,3 @@
-"use client";
 import React from 'react'
 import {motion} from "framer-motion";
 import Skill from './Skill';
@@ -6,6 +5,26 @@ import Skill from './Skill';
 type Props = {}
 
 const Skills = (props: Props) => {
+  const skills = [
+    { icon: 'mongodb', proficiency: '70%', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-plain-wordmark.svg' },
+    { icon: 'express', proficiency: '70%', src: 'https://cdn.jsdeliv'},
+    { icon: 'react', proficiency: '70%', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+    { icon: 'nodejs', proficiency: '70%', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg' },
+    { icon: 'graphql', proficiency: '100%', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-original.svg' },
+    { icon: 'nextjs', proficiency: '70%', src: 'https://cdn.jsdeliv'},
+    { icon: 'javascript', proficiency: '90%', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
+    { icon: 'typescript', proficiency: '80%', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' },
+    { icon: 'java', proficiency: '70%', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg' },
+    { icon: 'python', proficiency: '70%', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
+    { icon: 'github', proficiency: '70%', src: 'https://cdn.jsdeliv'},    
+    { icon: 'mysql', proficiency: '70%', src: 'https://cdn.jsdeliv'},
+    { icon: 'git', proficiency: '70%', src: 'https://cdn.jsdeliv'},
+    { icon: 'tailwindcss', proficiency: '70%', src: 'https://cdn.jsdeliv'},
+    { icon: 'bootstrap', proficiency: '70%', src: 'https://cdn.jsdeliv'},
+    { icon: 'latex', proficiency: '70%', src: 'https://cdn.jsdeliv'},
+    // Add more skills here
+  ];
+
   return (
     <motion.div 
     initial={{
@@ -22,25 +41,12 @@ const Skills = (props: Props) => {
 
         <h3 className='absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm'>Hover over skill for current proficiency</h3>
         <div className='pt-36 grid grid-cols-4 gap-5'>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
+          {skills.map((skill, index) => (
+            <Skill key={index} icon={skill.icon} proficiency={skill.proficiency} />
+          ))}
         </div>
     </motion.div>
   )
 }
 
-export default Skills
+export default Skills;
