@@ -19,6 +19,20 @@ const Projects = (props: Props) => {
       technologies: ['React', 'Node.js', 'MongoDB'],
       githubLink: 'https://github.com/yourusername/projectx', // GitHub link for the project
     },
+    {
+      title: 'ProjectX',
+      description: 'ProjectX is a groundbreaking application that revolutionizes the way users interact with technology, providing seamless integration and intuitive design.',
+      imageUrl: 'https://via.placeholder.com/300x200', // Replace with your actual image URL
+      technologies: ['React', 'Node.js', 'MongoDB'],
+      githubLink: 'https://github.com/yourusername/projectx', // GitHub link for the project
+    },
+    {
+      title: 'ProjectX',
+      description: 'ProjectX is a groundbreaking application that revolutionizes the way users interact with technology, providing seamless integration and intuitive design.',
+      imageUrl: 'https://via.placeholder.com/300x200', // Replace with your actual image URL
+      technologies: ['React', 'Node.js', 'MongoDB'],
+      githubLink: 'https://github.com/yourusername/projectx', // GitHub link for the project
+    }
     // Add more projects here as needed
   ];
 
@@ -68,7 +82,7 @@ const Projects = (props: Props) => {
         Projects
       </h3>
 
-      <div ref={containerRef} className='mt-40 relative flex w-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20'>
+      <div ref={containerRef} className='mt-20 relative flex w-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20'>
         {projects.map((project, index) => (
           <div key={index} className='w-screen flex-shrink-0 snap-center flex flex-col md:flex-row space-y-5 md:space-y-0 items-center justify-center p-10 md:p-20 h-screen'>
             <img 
@@ -79,7 +93,7 @@ const Projects = (props: Props) => {
             <div className='space-y-2 px-0 md:px-10 max-w-4xl text-center md:text-left'>
               <h4 className='text-3xl md:text-4xl font-semibold flex items-center'>
                 {project.title} <span className='text-gray-500 text-sm ml-2'>↗</span>
-                <div href={project.githubLink} target='_blank' rel='noopener noreferrer' className='ml-4 text-gray-500 hover:text-gray-900'>
+                <div className='ml-4 text-gray-500 hover:text-gray-900'>
                   <SocialIcon url={project.githubLink} fgColor="white" bgColor="black" style={{ height: 30, width: 30 }} />
                 </div>
               </h4>
