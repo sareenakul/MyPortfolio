@@ -31,7 +31,7 @@ const About = (props: Props) => {
             x: 0,
             opacity: 1,
         }}
-        className='flex-shrink-0 w-full md:w-auto' // Ensure the image container doesn't shrink
+        className=' pt-36 flex-shrink-0 w-full md:w-auto' // Ensure the image container doesn't shrink
         >
             <Image src={akul} alt="Akul" className='-mb-20 md:mb-0 w-56 h-56 rounded-full object-cover
             md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]' />
