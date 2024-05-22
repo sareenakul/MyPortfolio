@@ -21,31 +21,44 @@ const Projects: React.FC<Props> = (props) => {
       technologies: ['React', 'Node.js', 'MongoDB'],
       githubLink: 'https://github.com/yourusername/projectx',
     },
-    // Add more projects here as needed
+    {
+      title: 'ProjectY',
+      description: 'ProjectY is another innovative project that provides excellent solutions for modern problems.',
+      imageUrl: 'https://via.placeholder.com/300x200',
+      technologies: ['JavaScript', 'HTML', 'CSS'],
+      githubLink: 'https://github.com/yourusername/projecty',
+    },
+    {
+      title: 'ProjectZ',
+      description: 'ProjectZ focuses on delivering robust backend services with high scalability.',
+      imageUrl: 'https://via.placeholder.com/300x200',
+      technologies: ['Node.js', 'Express', 'MongoDB'],
+      githubLink: 'https://github.com/yourusername/projectz',
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
-  let scrollIndex = 0;
-  let autoScrollInterval: NodeJS.Timeout;
+  const autoScrollInterval = useRef<NodeJS.Timeout | null>(null);
 
   const startAutoScroll = () => {
-    autoScrollInterval = setInterval(() => {
-      if (containerRef.current) {
-        const container = containerRef.current;
-        const numberOfProjects = projects.length;
-        scrollIndex = (scrollIndex + 1) % numberOfProjects;
-        setCurrentIndex(scrollIndex);
-        container.scrollTo({
-          left: container.offsetWidth * scrollIndex,
-          behavior: 'smooth',
-        });
-      }
+    autoScrollInterval.current = setInterval(() => {
+      setCurrentIndex((prevIndex) => {
+        const nextIndex = prevIndex + 1;
+        if (nextIndex >= projects.length) {
+          stopAutoScroll();
+          return prevIndex;
+        }
+        return nextIndex;
+      });
     }, 3000);
   };
 
   const stopAutoScroll = () => {
-    clearInterval(autoScrollInterval);
+    if (autoScrollInterval.current) {
+      clearInterval(autoScrollInterval.current);
+      autoScrollInterval.current = null;
+    }
   };
 
   useEffect(() => {
@@ -60,61 +73,70 @@ const Projects: React.FC<Props> = (props) => {
       container.addEventListener('scroll', handleUserScroll);
 
       return () => {
-        stopAutoScroll();
         container.removeEventListener('scroll', handleUserScroll);
       };
     }
   }, []);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const container = containerRef.current;
+      container.scrollTo({
+        left: container.offsetWidth * currentIndex,
+        behavior: 'smooth',
+      });
+    }
+  }, [currentIndex]);
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 3 }}
-      className="h-screen flex relative flex-col text-left overflow-hidden md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
-        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
-            Projects
-        </h3>
-        <div ref={containerRef} className="mt-20 relative flex w-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
-            {projects.map((project, index) => (
-                <div key={index} className="w-screen flex-shrink-0 snap-center flex flex-col md:flex-row space-y-5 md:space-y-0 items-center justify-center p-10 md:p-20 h-screen">
-                    <motion.img
-                        initial={{
-                            opacity: 0,
-                            y: -300,
-                        }}
-                        transition={{ duration: 1 }}
-                        whileInView={{
-                            opacity: 1,
-                            y: 0,
-                        }}
-                        className="w-full md:w-1/2 h-auto rounded-md"
-                        src={project.imageUrl}
-                        alt={project.title}
-                    />
-                    <div className="space-y-2 px-0 md:px-10 max-w-4xl text-center md:text-left">
-                        <h4 className="text-3xl md:text-4xl font-semibold flex items-center">
-                            {project.title} <span className="text-gray-500 text-sm ml-2">↗</span>
-                            <div className="ml-4 text-gray-500 hover:text-gray-900">
-                                <SocialIcon url={project.githubLink} fgColor="white" bgColor="black" style={{ height: 30, width: 30 }} />
-                            </div>
-                        </h4>
-                        <p className="text-sm md:text-lg">
-                            {project.description}
-                        </p>
-                        <div className="flex space-x-2 justify-center md:justify-start">
-                            {project.technologies.map((tech, i) => (
-                                <span key={i} className="px-2 py-1 bg-gray-700 text-gray-100 rounded-md text-xs md:text-sm">
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
+      className="h-screen flex relative flex-col text-left overflow-hidden md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+    >
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+        Projects
+      </h3>
+      <div ref={containerRef} className="mt-20 relative flex w-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+        {projects.map((project, index) => (
+          <div key={index} className="w-screen flex-shrink-0 snap-center flex flex-col md:flex-row space-y-5 md:space-y-0 items-center justify-center p-10 md:p-20 h-screen">
+            <motion.img
+              initial={{
+                opacity: 0,
+                y: -300,
+              }}
+              transition={{ duration: 1 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              className="w-full md:w-1/2 h-auto rounded-md"
+              src={project.imageUrl}
+              alt={project.title}
+            />
+            <div className="space-y-2 px-0 md:px-10 max-w-4xl text-center md:text-left">
+              <h4 className="text-3xl md:text-4xl font-semibold flex items-center">
+                {project.title} <span className="text-gray-500 text-sm ml-2">↗</span>
+                <div className="ml-4 text-gray-500 hover:text-gray-900">
+                  <SocialIcon url={project.githubLink} fgColor="white" bgColor="black" style={{ height: 30, width: 30 }} />
                 </div>
-            ))}
-        </div>
-
-        <Dot currentIndex={currentIndex} totalProjects={projects.length} />
+              </h4>
+              <p className="text-sm md:text-lg">
+                {project.description}
+              </p>
+              <div className="flex space-x-2 justify-center md:justify-start">
+                {project.technologies.map((tech, i) => (
+                  <span key={i} className="px-2 py-1 bg-gray-700 text-gray-100 rounded-md text-xs md:text-sm">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <Dot currentIndex={currentIndex} totalProjects={projects.length} />
       <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
     </motion.div>
   );
