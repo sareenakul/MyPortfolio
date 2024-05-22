@@ -8,32 +8,32 @@ type Props = {};
 const Projects: React.FC<Props> = (props) => {
   const projects = [
     {
-      title: 'FaceTrack',
+      title: 'Course Announcement Application',
       description: 'FaceTrack records facial attendance by detecting and recognizing faces in real-time video and saving the data to a .csv file with a timestamp.',
       imageUrl: 'https://via.placeholder.com/300x200',
-      technologies: ['Python', 'OpenCV'],
-      githubLink: 'https://github.com/yourusername/facetrack',
+      technologies: ['GraphQL', 'Reactjs', "MongoDB", "Node.js", "JavaScript", "Apolo", "Tailwind CSS"],
+      githubLink: 'https://github.com/sareenakul/Course-Announcement',
     },
     {
       title: 'Akul\'s Chess',
       description: 'ProjectX is a groundbreaking application that revolutionizes the way users interact with technology, providing seamless integration and intuitive design.',
-      imageUrl: 'https://www.chess.com/bundles/web/images/offline-play/standardboard.1d6f9426.png',
-      technologies: ['React', 'Node.js', 'WebSockets', 'Tailwind CSS'],
+      imageUrl: 'https://via.placeholder.com/300x200',
+      technologies: ['Reactjs', 'TypeScript', 'Node.js', 'WebSockets', 'Tailwind CSS', "Figma"],
       githubLink: 'https://github.com/sareenakul/Chess',
     },
     {
       title: 'YouTube Vlog Portfolio',
       description: 'ProjectY is another innovative project that provides excellent solutions for modern problems.',
       imageUrl: 'https://via.placeholder.com/300x200',
-      technologies: ['JavaScript', 'HTML', 'CSS'],
+      technologies: ['Reactjs' ,'JavaScript',],
       githubLink: 'https://github.com/yourusername/projecty',
     },
     {
-      title: 'ProjectZ',
+      title: 'Resource Website EmpowerU',
       description: 'ProjectZ focuses on delivering robust backend services with high scalability.',
       imageUrl: 'https://via.placeholder.com/300x200',
       technologies: ['Node.js', 'Express', 'MongoDB'],
-      githubLink: 'https://github.com/yourusername/projectz',
+      githubLink: 'https://github.com/sareenakul/EmpowerU',
     },
   ];
 
