@@ -32,6 +32,15 @@ const Contact = (props: Props) => {
                         <p className='text-2xl' >5 Buttermill Avenue, Vaughan</p>
                     </div>
                 </div>
+
+                <form className='flex flex-col space-y-2 w-fit mx-auto'>
+                    <div className='flex space-x-2'>
+                        <input className='contactInput' type='text' /><input className='contactInput' type='text' />
+                    </div>
+                    <input className='contactInput' type='text'/>
+                    <textarea className='contactInput'/>
+                    <button>Submit</button>
+                </form>
             </div>
         </div>
     </div>
