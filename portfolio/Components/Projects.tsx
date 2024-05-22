@@ -132,11 +132,13 @@ const Projects: React.FC<Props> = (props) => {
                   </span>
                 ))}
               </div>
+              <div className="flex space-x-2 justify-center md:justify-start">
+              <Dot currentIndex={currentIndex} totalProjects={projects.length} />
+              </div>
             </div>
           </div>
         ))}
       </div>
-      <Dot currentIndex={currentIndex} totalProjects={projects.length} />
       <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
     </motion.div>
   );
