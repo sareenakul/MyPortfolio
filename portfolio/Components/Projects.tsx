@@ -98,9 +98,9 @@ const Projects: React.FC<Props> = (props) => {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
-      <div ref={containerRef} className="mt-20 relative flex w-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+      <div ref={containerRef} className="mt-20 relative flex w-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects.map((project, index) => (
-          <div key={index} className="w-screen flex-shrink-0 snap-center flex flex-col md:flex-row space-y-5 md:space-y-0 items-center justify-center p-10 md:p-20 h-screen">
+          <div key={index} className="w-screen flex-shrink-0 snap-center flex flex-col md:flex-row space-y-5 md:space-y-0 items-center justify-center p-10 pb-0 md:p-20 h-screen">
             <motion.img
               initial={{
                 opacity: 0,
@@ -133,7 +133,7 @@ const Projects: React.FC<Props> = (props) => {
                 ))}
               </div>
               <div className="flex space-x-2 justify-center md:justify-start">
-              <Dot currentIndex={currentIndex} totalProjects={projects.length} />
+              {/* <Dot currentIndex={currentIndex} totalProjects={projects.length} /> */}
               </div>
             </div>
           </div>
