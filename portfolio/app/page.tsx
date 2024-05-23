@@ -21,7 +21,7 @@ export default function Home() {
       <Header/>
 
       {/* Hero */}
-      <section id="hero" className="snap-start">
+      <section id="hero" className="snap-center">
         <Hero/>
       </section>
 
@@ -41,7 +41,7 @@ export default function Home() {
       </section>
 
       {/* Projects */}
-      <section id="projects" className="snap-start">
+      <section id="projects" className="snap-center">
         <Projects/>
       </section>
 

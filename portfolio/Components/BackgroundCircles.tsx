@@ -32,7 +32,7 @@ const BackgroundCircles = (props: Props) => {
         className='absolute rounded-full animate-pulse'
       />
       <animated.div
-        style={{ ...circleProps(200, '800px', '#333333'), height: '800px', width: '800px', border: '1px solid #333333', marginTop: '13rem' }}
+        style={{ ...circleProps(200, '800px', '#333333'), height: '400px', width: '400px', border: '1px solid #333333', marginTop: '13rem' }}
         className='absolute rounded-full'
       />
     </div>

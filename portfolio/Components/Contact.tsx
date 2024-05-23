@@ -1,6 +1,7 @@
 import React from 'react';
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/16/solid';
 import {useForm, SubmitHandler} from "react-hook-form";
+import Footer from './Footer';
 
 type Props = {}
 type Inputs = {
@@ -55,6 +56,7 @@ const Contact = (props: Props) => {
             </div>
         </div>
     </div>
+    
   )
 }
 
