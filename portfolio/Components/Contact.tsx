@@ -1,9 +1,18 @@
 import React from 'react';
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/16/solid';
+import {useForm, SubmitHandler} from "react-hook-form";
 
 type Props = {}
+type Inputs = {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+  };
 
 const Contact = (props: Props) => {
+    const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
   return (
     <div className='h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
         <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>

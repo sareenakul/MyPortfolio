@@ -5,9 +5,11 @@ import excel from "../public/excel.png"; // Ensure this path is correct
 import c4 from "../public/c4.png";
 
 
+
 type Props = {};
 
 const WorkExperience: React.FC<Props> = (props) => {
+
   const experiences = [
     {
       title: 'Teaching Assistant',
