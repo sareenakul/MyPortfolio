@@ -10,8 +10,7 @@ import WorkExperience from "@/Components/WorkExperience";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import ak from "../public/Akuls.jpg";
-import aa from "../public/akuls1.jpg"
+import { HomeIcon } from "@heroicons/react/16/solid";
 
 
 export default function Home() {
@@ -54,12 +53,12 @@ export default function Home() {
       </section>
 
       <Link href="#hero">
-        <footer className=" sticky bottom-5 w-full cursor-pointer">
-          <div>
-            <Image className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0" src={aa} alt="home"/>
-          </div>
-        </footer>
-      </Link>
+      <footer className="sticky bottom-5 w-full cursor-pointer">
+        <div className="flex">
+          <HomeIcon className="h-10 w-10 text-gray-500 hover:text-gray-900 transition-colors duration-300 ease-in-out transform hover:scale-110" />
+        </div>
+      </footer>
+    </Link>
 
       {/* Footer */}
       <section id="footer" className="snap-end">
