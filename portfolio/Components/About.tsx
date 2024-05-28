@@ -49,7 +49,8 @@ const About = (props: Props) => {
                 It really initiated a spark in me and within a year, I mastered Reactjs. I'm Akul. Mostly known for my infamous Canadian vlogs on my channel
                 medleydiaries. Currently, I am persuing my 3rd year at YorkU in Bachelor of Science with Specialized Honours in Computer Science. Ever since my degree began, I had 
                 little to no idea as what I would do in the feild of Computer Science. I was lucky enough to try my hands on Frontend Development at first.
-                It really initiated a spark in me and within a year, I mastered Reactjs
+                It really initiated a spark in me and within a year, I mastered Reactjs It really initiated a spark in me and within a year, I mastered Reactjs. I'm Akul. Mostly known for my infamous Canadian vlogs on my channel
+                medleydiaries.
             </p>
         </div>
     </motion.div>
