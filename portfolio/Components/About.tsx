@@ -8,7 +8,7 @@ import ScrollText from './ScrollText';
 type Props = {}
 
 const About = (props: Props) => {
-    const words = ["About me", "Background"];
+    const words = ["About me", "Background", "Preview", "Summary"];
     const start = "A little ";
   return (
     <motion.div 
