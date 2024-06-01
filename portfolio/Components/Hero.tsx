@@ -21,7 +21,7 @@ const Hero = (props: Props) => {
     //     delaySpeed: 100,
     // });
 
-    const descps = ["kul"," Web-Developer"," Problem Solver"," <Coder>"];
+    const descps = ["kul","  Web-Developer"," Problem Solver"," <Coder>"];
     const images = [akul, two, six, seven];
     const [currentImage, setCurrentImage] = useState(0);
     const [animating, setAnimating] = useState(false);
@@ -44,13 +44,15 @@ const Hero = (props: Props) => {
                 <Image src={images[currentImage]} alt='me' layout='fill' objectFit='cover' className='rounded-full' />
             </div>
             <div className='z-20'>
-                <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>Software Developer</h2>
+                <h2 className='text-sm uppercase text-gray-400 pb-2 tracking-[15px]'>Software Developer</h2>
                 {/* <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
                     <span className='mr-3'>Hi, I'm a{text}</span>
                     <Cursor cursorColor='orange'/>
                 </h1> */}
-                <ScrollText words={descps}/>
-                <div className='pt-5 mt-[2rem]'>
+                <div className=''>
+                    <ScrollText words={descps}/>
+                </div>
+                <div className=' mt-[2rem]'>
                     <Link href="#about">
                         <button className='heroButton'>About</button>
                     </Link>

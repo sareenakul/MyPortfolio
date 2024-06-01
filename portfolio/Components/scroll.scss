@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato");
 
   .content {
-    position: absolute;
-    top: 50%;
+    position: relative;
+    top: 2rem;
     left: 50%;
     transform: translate(-50%, -50%);
    height: 50px;
@@ -11,13 +11,13 @@
     font-family: 'Lato', sans-serif;
     font-size: 35px;
     line-height: 40px;
-    color: black;
+    color: whitesmoke;
     
     &__container {
       font-weight: 600;
       overflow: hidden;
       height: 40px;
-      padding: 0 40px;
+      padding: 0 50px;
   
       &:before {
         content: '[';
