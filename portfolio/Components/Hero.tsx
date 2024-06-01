@@ -7,19 +7,21 @@ import Link from 'next/link';
 import two from "../public/photosMe/hero2.jpg";
 import six from "../public/photosMe/hero6.jpg";
 import seven from "../public/photosMe/hero7.jpg";
+import ScrollText from './ScrollText';
 
 type Props = {}
 
 const Hero = (props: Props) => {
-    const [text, count] = useTypewriter({
-        words: ["kul",
-        " Web-Developer",
-        " Problem Solver",
-        " <Coder>"],
-        loop: true,
-        delaySpeed: 100,
-    });
+    // const [text, count] = useTypewriter({
+    //     words: ["kul",
+    //     " Web-Developer",
+    //     " Problem Solver",
+    //     " <Coder>"],
+    //     loop: true,
+    //     delaySpeed: 100,
+    // });
 
+    const descps = ["kul"," Web-Developer"," Problem Solver"," <Coder>"];
     const images = [akul, two, six, seven];
     const [currentImage, setCurrentImage] = useState(0);
     const [animating, setAnimating] = useState(false);
@@ -43,10 +45,11 @@ const Hero = (props: Props) => {
             </div>
             <div className='z-20'>
                 <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>Software Developer</h2>
-                <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
+                {/* <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
                     <span className='mr-3'>Hi, I'm a{text}</span>
                     <Cursor cursorColor='orange'/>
-                </h1>
+                </h1> */}
+                <ScrollText words={descps}/>
                 <div className='pt-5 mt-[2rem]'>
                     <Link href="#about">
                         <button className='heroButton'>About</button>
