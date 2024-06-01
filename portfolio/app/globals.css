@@ -43,3 +43,22 @@ body {
     hover:border-[#F7AB0A]/40 font-bold text-lg
   }
 }
+
+.image-transition {
+  animation: pop-up 1s ease-in-out;
+}
+
+@keyframes pop-up {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
