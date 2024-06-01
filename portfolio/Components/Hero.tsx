@@ -22,6 +22,7 @@ const Hero = (props: Props) => {
     // });
 
     const descps = ["kul","  Web-Developer"," Problem Solver"," <Coder>"];
+    const st = "Hi, I'm a"
     const images = [akul, two, six, seven];
     const [currentImage, setCurrentImage] = useState(0);
     const [animating, setAnimating] = useState(false);
@@ -50,7 +51,7 @@ const Hero = (props: Props) => {
                     <Cursor cursorColor='orange'/>
                 </h1> */}
                 <div className=''>
-                    <ScrollText words={descps}/>
+                    <ScrollText words={descps} st = {st}/>
                 </div>
                 <div className=' mt-[2rem]'>
                     <Link href="#about">

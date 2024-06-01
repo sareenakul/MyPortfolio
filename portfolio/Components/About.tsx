@@ -3,10 +3,13 @@ import React from 'react';
 import akul from "../public/Akul.jpeg";
 import Image from 'next/image';
 import {motion} from "framer-motion";
+import ScrollText from './ScrollText';
 
 type Props = {}
 
 const About = (props: Props) => {
+    const words = ["About me", "Background"];
+    const start = "A little ";
   return (
     <motion.div 
     initial={{
@@ -38,7 +41,8 @@ const About = (props: Props) => {
         </motion.div>
 
         <div className='space-y-10 px-0 md:px-10 flex-1'> {/* Add flex-1 to allow this div to take remaining space */}
-            <h4 className='pt-[7rem] text-4xl font-semibold'>A <span className='underline decoration-[#F7AB0A]/50'>little</span>{" "} background</h4>
+            <h4 className='pt-[7rem] text-4xl font-semibold'>
+                <ScrollText words={words} st = {start}  /></h4>
             <p className='text-base'>
                 I'm Akul. Mostly known for my infamous Canadian vlogs on my channel medleydiaries. Currently, I am persuing my 3rd year at YorkU in 
                 Bachelor of Science with Specialized Honours in Computer Science. Ever since my degree began, I had little to no idea as what I would
