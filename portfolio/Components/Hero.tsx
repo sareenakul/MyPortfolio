@@ -17,7 +17,7 @@ const Hero = (props: Props) => {
         " Problem Solver",
         " <Coder>"],
         loop: true,
-        delaySpeed: 2000,
+        delaySpeed: 100,
     });
 
     const images = [akul, two, six, seven];
@@ -47,7 +47,7 @@ const Hero = (props: Props) => {
                     <span className='mr-3'>Hi, I'm a{text}</span>
                     <Cursor cursorColor='orange'/>
                 </h1>
-                <div className='pt-5'>
+                <div className='pt-5 mt-[2rem]'>
                     <Link href="#about">
                         <button className='heroButton'>About</button>
                     </Link>
