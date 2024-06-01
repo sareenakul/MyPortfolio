@@ -36,7 +36,7 @@ const Projects: React.FC<Props> = (props) => {
       title: 'Resource Website EmpowerU',
       description: 'ProjectZ focuses on delivering robust backend services with high scalability.',
       imageUrl: 'https://via.placeholder.com/300x200',
-      videoUrl: 'https://www.youtube.com/embed/reJyFC5NfDs?autoplay=1',
+      videoUrl: 'https://www.youtube.com/embed/0kMTyinxsrU?autoplay=1',
       technologies: ['Node.js', 'Express', 'MongoDB'],
       githubLink: 'https://github.com/sareenakul/EmpowerU',
     },
