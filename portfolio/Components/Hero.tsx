@@ -21,7 +21,7 @@ const Hero = (props: Props) => {
     //     delaySpeed: 100,
     // });
 
-    const descps = ["kul","  Web-Developer"," Problem Solver"," <Coder>"];
+    const descps = ["kul Sareen", "daptive","stute"," <Coder>"];
     const st = "Hi, I'm a"
     const images = [akul, two, six, seven];
     const [currentImage, setCurrentImage] = useState(0);
