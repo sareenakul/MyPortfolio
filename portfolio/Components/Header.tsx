@@ -16,13 +16,13 @@ function Header({}: Props) {
   const leftSpring = useSpring({
     from: { scale: 0.5, opacity: 0, x: -500 },
     to: { scale: 1, opacity: 1, x: 0 },
-    config: { duration: 1000 },
+    config: { duration: 700 },
   });
 
   const rightSpring = useSpring({
     from: { scale: 0.5, opacity: 0, x: 500 },
     to: { scale: 1, opacity: 1, x: 0 },
-    config: { duration: 1000 },
+    config: { duration: 400 },
   });
 
   if (!isClient) {

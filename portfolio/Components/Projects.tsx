@@ -28,7 +28,7 @@ const Projects: React.FC<Props> = (props) => {
       title: 'YouTube Vlog Portfolio',
       description: 'ProjectY is another innovative project that provides excellent solutions for modern problems.',
       imageUrl: 'https://via.placeholder.com/300x200',
-      videoUrl: 'https://www.youtube.com/embed/reJyFC5NfDs?autoplay=1',
+      videoUrl: 'https://youtube.com/embed/QlYNAHMuFT8?autoplay=1',
       technologies: ['Reactjs' ,'JavaScript',],
       githubLink: 'https://github.com/yourusername/projecty',
     },

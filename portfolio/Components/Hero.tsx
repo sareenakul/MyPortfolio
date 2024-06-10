@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import BackgroundCircles from './BackgroundCircles';
 import akul from "../public/Akul.jpeg";
 import Image from 'next/image';
@@ -8,6 +7,10 @@ import two from "../public/photosMe/hero2.jpg";
 import six from "../public/photosMe/hero6.jpg";
 import seven from "../public/photosMe/hero7.jpg";
 import ScrollText from './ScrollText';
+import ak1 from "../public/yuAkul/ak1.png";
+import ak2 from "../public/yuAkul/ak2.png";
+import ak3 from "../public/yuAkul/ak3.png";
+import ak4 from "../public/yuAkul/ak4.png";
 
 type Props = {}
 
@@ -23,7 +26,7 @@ const Hero = (props: Props) => {
 
     const descps = ["kul Sareen", "daptive","stute"," <Coder>"];
     const st = "Hi, I'm a"
-    const images = [akul, two, six, seven];
+    const images = [ak2, ak3, ak4];
     const [currentImage, setCurrentImage] = useState(0);
     const [animating, setAnimating] = useState(false);
 
@@ -34,7 +37,7 @@ const Hero = (props: Props) => {
                 setCurrentImage((prevImage) => (prevImage + 1) % images.length);
                 setAnimating(false);
             }, 0); // 1 second animation
-        }, 100); // Change image every 3 seconds
+        }, 600); // Change image every 3 seconds
         return () => clearInterval(interval);
     }, [images.length]);
 

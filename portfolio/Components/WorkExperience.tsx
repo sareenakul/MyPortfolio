@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import ExperienceCard from './ExperienceCard';
 import excel from "../public/excel.png"; // Ensure this path is correct
 import c4 from "../public/c4.png";
+import ghLogo from "../public/ghLogo.png";
 
 
 
@@ -12,23 +13,22 @@ const WorkExperience: React.FC<Props> = (props) => {
 
   const experiences = [
     {
-      title: 'Teaching Assistant',
-      company: 'Excel Lassonde',
-      companyLogo: excel,
+      title: 'Backend Developer',
+      company: 'GramerHub',
+      companyLogo: ghLogo,
       technologies: [
-        'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg',
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original-wordmark.svg",
         'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
-        'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
         'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
       ],
       startDate: 'Aug 2023',
       endDate: 'Present',
       summaryPoints: [
-        'Assisted with lectures and labs',
-        'Graded assignments and exams',
-        'Provided one-on-one support to students',
-        'Developed supplemental materials',
-        'Led review sessions before exams',
+        'Developed user authentication using Firebase',
+        'Error Handling',
+        'Testing and Debugging',
+        'Followed sprint format for product development',
       ],
     },
     // Add more experience objects here
@@ -43,6 +43,26 @@ const WorkExperience: React.FC<Props> = (props) => {
             'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
         ],
         startDate: 'January 2021',
+        endDate: 'Present',
+        summaryPoints: [
+          'Assisted with lectures and labs',
+          'Graded assignments and exams',
+          'Provided one-on-one support to students',
+          'Developed supplemental materials',
+          'Led review sessions before exams',
+        ],
+      },
+      {
+        title: 'Teaching Assistant',
+        company: 'Excel Lassonde',
+        companyLogo: excel,
+        technologies: [
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg',
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+        ],
+        startDate: 'Aug 2023',
         endDate: 'Present',
         summaryPoints: [
           'Assisted with lectures and labs',
