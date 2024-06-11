@@ -4,6 +4,7 @@ import akul from "../public/Akul.jpeg";
 import Image from 'next/image';
 import { motion } from "framer-motion";
 import ScrollText from './ScrollText';
+import mainImg from "../public/mainImg.png";
 
 type Props = {}
 
@@ -29,7 +30,7 @@ const About = (props: Props) => {
                     className='pt-20 sm:pt-[10rem] flex-shrink-0 w-full md:w-auto'
                 >
                     <Image 
-                        src={akul} 
+                        src={mainImg} 
                         alt="Akul" 
                         className='mt-[1rem] mb-[1rem] sm:mb-0 w-40 h-40 sm:w-56 sm:h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]' 
                     />

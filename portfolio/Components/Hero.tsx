@@ -7,10 +7,12 @@ import two from "../public/photosMe/hero2.jpg";
 import six from "../public/photosMe/hero6.jpg";
 import seven from "../public/photosMe/hero7.jpg";
 import ScrollText from './ScrollText';
-import ak1 from "../public/yuAkul/ak1.png";
-import ak2 from "../public/yuAkul/ak2.png";
-import ak3 from "../public/yuAkul/ak3.png";
-import ak4 from "../public/yuAkul/ak4.png";
+import im1 from "../public/imAkul/im1.png";
+import im2 from "../public/imAkul/im2.png";
+import im3 from "../public/imAkul/im3.png";
+import im4 from "../public/imAkul/im4.png";
+import im5 from "../public/imAkul/im5.png";
+import im6 from "../public/imAkul/im6.png";
 
 type Props = {}
 
@@ -26,7 +28,7 @@ const Hero = (props: Props) => {
 
     const descps = ["kul Sareen", "daptive","stute"," <Coder>"];
     const st = "Hi, I'm a"
-    const images = [ak2, ak3, ak4];
+    const images = [im1, im2, im3, im4, im5, im6, im5, im4, im3, im2, im1];
     const [currentImage, setCurrentImage] = useState(0);
     const [animating, setAnimating] = useState(false);
 
@@ -37,7 +39,7 @@ const Hero = (props: Props) => {
                 setCurrentImage((prevImage) => (prevImage + 1) % images.length);
                 setAnimating(false);
             }, 0); // 1 second animation
-        }, 600); // Change image every 3 seconds
+        }, 300); // Change image every 3 seconds
         return () => clearInterval(interval);
     }, [images.length]);
 
