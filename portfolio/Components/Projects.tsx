@@ -10,6 +10,14 @@ type Props = {};
 const Projects: React.FC<Props> = (props) => {
   const projects = [
     {
+      title: 'My Portfolio',
+      description: '• Implemented UX-focused smooth, interactive animations using Framer Motion and React Spring. \n• Developed with TypeScript for type safety and improved code quality. \n• Ensured seamless mobile responsiveness with Tailwind CSS.',
+      imageUrl: '/portPhoto.png',
+      videoUrl: 'https://www.youtube.com/embed/reJyFC5NfDs?autoplay=1',
+      technologies: ['Next.js','Node.js', 'Framer Motion', 'React Spring'],
+      githubLink: 'https://github.com/sareenakul/EmpowerU',
+    },
+    {
       title: 'Course Announcement Application',
       description: '• An announcement application allowing CRUD operations with GraphQL.\n• Customized root queries and mutations for data alteration. \n• Designed mobile-friendly UI for enhanced user experience.',
       imageUrl: '/ca.png',
@@ -30,7 +38,7 @@ const Projects: React.FC<Props> = (props) => {
       description: '• Built a mobile responsive web design using React and Bootstrap. \n• Designed the UI using Figma. \n• Deployed using AWS services such as S3 and Amplify.',
       imageUrl: '/mDimage.png',
       videoUrl: 'https://youtube.com/embed/QlYNAHMuFT8?autoplay=1',
-      technologies: ['Reactjs' ,'JavaScript',],
+      technologies: ['Reactjs' ,'JavaScript', 'Tailwind CSS', "Figma"],
       webURL: 'https://main.d1jm76fngccuyv.amplifyapp.com/',
       githubLink: 'https://github.com/sareenakul/Medley-Diaries-Website',
     },
@@ -39,70 +47,26 @@ const Projects: React.FC<Props> = (props) => {
       description: "• A mobile-responsive web application for the EmpowerU capstone project.\n• Leveraged Github for team collaboration with cross-functional teams.\n• Achieved a notable 15% increase in user engagement for better client experience.",
       imageUrl: '/eU.png',
       videoUrl: 'https://www.youtube.com/embed/0kMTyinxsrU?autoplay=1',
-      technologies: ['Node.js', 'Express', 'MongoDB'],
-      githubLink: 'https://github.com/sareenakul/EmpowerU',
-    },
-    {
-      title: 'My Portfolio',
-      description: '• Implemented UX-focused smooth, interactive animations using Framer Motion and React Spring. \n• Developed with TypeScript for type safety and improved code quality. \n• Ensured seamless mobile responsiveness with Tailwind CSS.',
-      imageUrl: '/portPhoto.png',
-      videoUrl: 'https://www.youtube.com/embed/reJyFC5NfDs?autoplay=1',
-      technologies: ['Node.js', 'Express', 'MongoDB'],
+      technologies: ['Node.js', 'Gemini AI', 'Reactjs', 'TypeScript'],
       githubLink: 'https://github.com/sareenakul/EmpowerU',
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
-  const autoScrollInterval = useRef<NodeJS.Timeout | null>(null);
   const [clickedIndex, setClickedIndex] = useState<number | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const startAutoScroll = () => {
-    autoScrollInterval.current = setInterval(() => {
-      setCurrentIndex((prevIndex) => {
-        const nextIndex = prevIndex + 1;
-        if (nextIndex >= projects.length) {
-          stopAutoScroll();
-          return prevIndex;
-        }
-        return nextIndex;
-      });
-    }, 3000);
+  const handlePrevClick = () => {
+    setCurrentIndex((prevIndex) => prevIndex - 1 < 0 ? projects.length - 1 : prevIndex - 1);
   };
-
-  const stopAutoScroll = () => {
-    if (autoScrollInterval.current) {
-      clearInterval(autoScrollInterval.current);
-      autoScrollInterval.current = null;
-    }
+  
+  const handleNextClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
   };
+  
+  
 
-  useEffect(() => {
-    startAutoScroll();
-
-    const container = containerRef.current;
-    if (container) {
-      const handleUserScroll = () => {
-        stopAutoScroll();
-      };
-
-      container.addEventListener('scroll', handleUserScroll);
-
-      return () => {
-        container.removeEventListener('scroll', handleUserScroll);
-      };
-    }
-  }, []);
-
-  useEffect(() => {
-    if (containerRef.current) {
-      const container = containerRef.current;
-      container.scrollTo({
-        left: container.offsetWidth * currentIndex,
-        behavior: 'smooth',
-      });
-    }
-  }, [currentIndex]);
+  
 
   return (
     <motion.div
@@ -169,6 +133,11 @@ const Projects: React.FC<Props> = (props) => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-4">
+        <button onClick={handlePrevClick} className="px-4 py-2 bg-gray-700 text-white rounded-md">Prev</button>
+        <button onClick={handleNextClick} className="px-4 py-2 bg-gray-700 text-white rounded-md">Next</button>
       </div>
       <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
     </motion.div>

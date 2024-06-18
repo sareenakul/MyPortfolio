@@ -13,7 +13,7 @@ const WorkExperience: React.FC<Props> = (props) => {
 
   const experiences = [
     {
-      title: 'Backend Developer',
+      title: 'Fullstack Developer',
       company: 'GramerHub',
       companyLogo: ghLogo,
       technologies: [
