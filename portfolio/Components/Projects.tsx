@@ -11,7 +11,7 @@ const Projects: React.FC<Props> = (props) => {
   const projects = [
     {
       title: 'Course Announcement Application',
-      description: 'FaceTrack records facial attendance by detecting and recognizing faces in real-time video and saving the data to a .csv file with a timestamp.',
+      description: '• An announcement application allowing CRUD operations with GraphQL.\n• Customized root queries and mutations for data alteration. \n• Designed mobile-friendly UI for enhanced user experience.',
       imageUrl: '/ca.png',
       videoUrl: 'https://youtube.com/embed/NataxT7JY7s?autoplay=1',
       technologies: ['GraphQL', 'Reactjs', "MongoDB", "Node.js", "JavaScript", "Apolo", "Tailwind CSS"],
@@ -19,7 +19,7 @@ const Projects: React.FC<Props> = (props) => {
     },
     {
       title: 'Akul\'s Chess',
-      description: 'ProjectX is a groundbreaking application that revolutionizes the way users interact with technology, providing seamless integration and intuitive design.',
+      description: '• A real-time multiplayer chess game using Chess.js library. \n• Ensured type safety and code quality with React and TypeScript. \n• Implemented reliable gameplay with WebSockets.',
       imageUrl: '/ch.png',
       videoUrl: 'https://www.youtube.com/embed/reJyFC5NfDs?autoplay=1',
       technologies: ['Reactjs', 'TypeScript', 'Node.js', 'WebSockets', 'Tailwind CSS', "Figma"],
@@ -27,7 +27,7 @@ const Projects: React.FC<Props> = (props) => {
     },
     {
       title: 'YouTube Vlog Portfolio',
-      description: 'ProjectY is another innovative project that provides excellent solutions for modern problems.',
+      description: '• Built a mobile responsive web design using React and Bootstrap. \n• Designed the UI using Figma. \n• Deployed using AWS services such as S3 and Amplify.',
       imageUrl: '/mDimage.png',
       videoUrl: 'https://youtube.com/embed/QlYNAHMuFT8?autoplay=1',
       technologies: ['Reactjs' ,'JavaScript',],
@@ -36,7 +36,7 @@ const Projects: React.FC<Props> = (props) => {
     },
     {
       title: 'Resource Website EmpowerU',
-      description: "• Spearheaded the development of a mobile-responsive React web application for the EmpowerU capstone project.\n• Leveraged Github and MS Office for seamless team collaboration with cross-functional teams to achieve integration and assessed user interactivity for better mobile responsiveness.\n• Achieved a notable 15% increase in user engagement for better client experience.",
+      description: "• A mobile-responsive web application for the EmpowerU capstone project.\n• Leveraged Github for team collaboration with cross-functional teams.\n• Achieved a notable 15% increase in user engagement for better client experience.",
       imageUrl: '/eU.png',
       videoUrl: 'https://www.youtube.com/embed/0kMTyinxsrU?autoplay=1',
       technologies: ['Node.js', 'Express', 'MongoDB'],
@@ -44,7 +44,7 @@ const Projects: React.FC<Props> = (props) => {
     },
     {
       title: 'My Portfolio',
-      description: 'ProjectZ focuses on delivering robust backend services with high scalability.',
+      description: '• Implemented UX-focused smooth, interactive animations using Framer Motion and React Spring. \n• Developed with TypeScript for type safety and improved code quality. \n• Ensured seamless mobile responsiveness with Tailwind CSS.',
       imageUrl: '/portPhoto.png',
       videoUrl: 'https://www.youtube.com/embed/reJyFC5NfDs?autoplay=1',
       technologies: ['Node.js', 'Express', 'MongoDB'],
