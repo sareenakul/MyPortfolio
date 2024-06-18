@@ -3,6 +3,7 @@ import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import Dot from './Dot';
 const portPhoto = require('../public/portPhoto.png');
+const mdImage = require('../public/mDimage.png');
 
 type Props = {};
 
@@ -27,15 +28,16 @@ const Projects: React.FC<Props> = (props) => {
     {
       title: 'YouTube Vlog Portfolio',
       description: 'ProjectY is another innovative project that provides excellent solutions for modern problems.',
-      imageUrl: 'https://via.placeholder.com/300x200',
+      imageUrl: '/mDimage.png',
       videoUrl: 'https://youtube.com/embed/QlYNAHMuFT8?autoplay=1',
       technologies: ['Reactjs' ,'JavaScript',],
+      webURL: 'https://main.d1jm76fngccuyv.amplifyapp.com/',
       githubLink: 'https://github.com/yourusername/projecty',
     },
     {
       title: 'Resource Website EmpowerU',
       description: 'ProjectZ focuses on delivering robust backend services with high scalability.',
-      imageUrl: 'https://via.placeholder.com/300x200',
+      imageUrl: '/eU.png',
       videoUrl: 'https://www.youtube.com/embed/0kMTyinxsrU?autoplay=1',
       technologies: ['Node.js', 'Express', 'MongoDB'],
       githubLink: 'https://github.com/sareenakul/EmpowerU',
@@ -143,7 +145,8 @@ const Projects: React.FC<Props> = (props) => {
             </div>
             <div className="space-y-2 px-0 md:px-10 max-w-4xl text-center md:text-left">
               <h4 className="text-3xl md:text-4xl font-semibold flex items-center">
-                {project.title} <span className="text-gray-500 text-sm ml-2">↗</span>
+                {project.title} 
+                <a href={project.webURL} target='_blank' className="text-gray-500 text-sm ml-2">↗</a>
                 <div className="ml-4 text-gray-500 hover:text-gray-900">
                   <SocialIcon url={project.githubLink} fgColor="white" bgColor="black" style={{ height: 30, width: 30 }} />
                 </div>

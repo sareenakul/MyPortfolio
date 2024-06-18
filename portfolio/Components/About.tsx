@@ -41,12 +41,18 @@ const About = (props: Props) => {
                 <h4 className='mt-[5rem] sm:mt-[7rem] text-2xl sm:text-4xl font-semibold'>
                     <ScrollText words={words} st={start} />
                 </h4>
-                <p className='text-sm sm:text-base text-[wheat]'>
-                    I'm Akul. Mostly known for my infamous Canadian vlogs on MedleyDiaries. At the moment, I am pursuing my 3rd year at YorkU in 
+                <p className=' border-solid-[white] text-sm sm:text-base text-[wheat]'>
+                    I'm Akul. Mostly known for my infamous Canadian vlogs on MedleyDiaries. At the moment, I am pursuing my 3rd year at York University in 
                     Bachelor of Science with Specialized Honours in Computer Science. Ever since my degree began, I had little to no idea as what all domains
                     would I be able to explore in the field of Computer Science. I was lucky enough to try my hands on Frontend Development at first, that sent
-                    me on a stive to make several web-projects and increase my horizon of skills. I mastered Reactjs and upgraded to Nextjs thereafter. 
-                    
+                    me on a stive to make several web-projects and increase my horizon of skills. I mastered Reactjs and upgraded to Nextjs. I prefer to work on the MVC 
+                    architecture style in my projects. In addition to that, I have tried my hands on DBMS such as MySQL and MongoDB. Though I prefer to work on GraphQL
+                    than restful APIs. At the moment, I find myself working more on backend projects to polish my reasoning and Object-oriented style of programming. 
+                </p>
+                <p className=' border-solid-[white] text-sm sm:text-base text-[wheat]'>
+                    Further, I plan to learn IOS App Development, polishing through Objective C and Swift language. I believe, it is crutial to switch towards mobile 
+                    application development. Since, this niche is not as saturated as web development is at the moment. In my perspective, MERN Stack has actually given
+                    me the confidence to keep exploring different tech stacks. 
                 </p>
             </div>
         </motion.div>
