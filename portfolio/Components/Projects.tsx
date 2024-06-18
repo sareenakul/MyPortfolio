@@ -12,8 +12,8 @@ const Projects: React.FC<Props> = (props) => {
     {
       title: 'Course Announcement Application',
       description: 'FaceTrack records facial attendance by detecting and recognizing faces in real-time video and saving the data to a .csv file with a timestamp.',
-      imageUrl: 'https://via.placeholder.com/300x200',
-      videoUrl: 'https://www.youtube.com/embed/reJyFC5NfDs?autoplay=1',
+      imageUrl: '/ca.png',
+      videoUrl: 'https://youtube.com/embed/NataxT7JY7s?autoplay=1',
       technologies: ['GraphQL', 'Reactjs', "MongoDB", "Node.js", "JavaScript", "Apolo", "Tailwind CSS"],
       githubLink: 'https://github.com/sareenakul/Course-Announcement',
     },
@@ -32,11 +32,11 @@ const Projects: React.FC<Props> = (props) => {
       videoUrl: 'https://youtube.com/embed/QlYNAHMuFT8?autoplay=1',
       technologies: ['Reactjs' ,'JavaScript',],
       webURL: 'https://main.d1jm76fngccuyv.amplifyapp.com/',
-      githubLink: 'https://github.com/yourusername/projecty',
+      githubLink: 'https://github.com/sareenakul/Medley-Diaries-Website',
     },
     {
       title: 'Resource Website EmpowerU',
-      description: 'ProjectZ focuses on delivering robust backend services with high scalability.',
+      description: "• Spearheaded the development of a mobile-responsive React web application for the EmpowerU capstone project.\n• Leveraged Github and MS Office for seamless team collaboration with cross-functional teams to achieve integration and assessed user interactivity for better mobile responsiveness.\n• Achieved a notable 15% increase in user engagement for better client experience.",
       imageUrl: '/eU.png',
       videoUrl: 'https://www.youtube.com/embed/0kMTyinxsrU?autoplay=1',
       technologies: ['Node.js', 'Express', 'MongoDB'],
@@ -151,9 +151,11 @@ const Projects: React.FC<Props> = (props) => {
                   <SocialIcon url={project.githubLink} fgColor="white" bgColor="black" style={{ height: 30, width: 30 }} />
                 </div>
               </h4>
-              <p className="text-sm md:text-lg">
-                {project.description}
-              </p>
+              <div>
+                {project.description.split('\n').map((line, index) => (
+                  <p className="text-sm md:text-lg" key={index}>{line}</p>
+                ))}
+              </div>
               <div className="flex space-x-2 justify-center md:justify-start">
                 {project.technologies.map((tech, i) => (
                   <span key={i} className="px-2 py-1 bg-gray-700 text-gray-100 rounded-md text-xs md:text-sm">
