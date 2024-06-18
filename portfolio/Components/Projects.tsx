@@ -20,7 +20,7 @@ const Projects: React.FC<Props> = (props) => {
     {
       title: 'Akul\'s Chess',
       description: 'ProjectX is a groundbreaking application that revolutionizes the way users interact with technology, providing seamless integration and intuitive design.',
-      imageUrl: 'https://via.placeholder.com/300x200',
+      imageUrl: '/ch.png',
       videoUrl: 'https://www.youtube.com/embed/reJyFC5NfDs?autoplay=1',
       technologies: ['Reactjs', 'TypeScript', 'Node.js', 'WebSockets', 'Tailwind CSS', "Figma"],
       githubLink: 'https://github.com/sareenakul/Chess',
