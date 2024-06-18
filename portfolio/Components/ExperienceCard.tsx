@@ -37,14 +37,16 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
       />
       <div className='px-0 md:px-10'>
         <h4 className='text-4xl font-light'>{title}</h4>
-        <p className='font-bold text-2xl mt-1'>{company}</p>
+        <p className='font-bold text-2xl mt-1 text-[wheat]'>{company}</p>
         <div className='flex space-x-2 my-2'>
           {technologies.map((tech, index) => (
             <img key={index} className='h-10 w-10 rounded-full' src={tech} alt={`tech-${index}`} />
           ))}
         </div>
         <p className='uppercase py-5 text-gray-300'>
-          {startDate} - {endDate}
+          <b>
+            {startDate} - {endDate}
+          </b>
         </p>
         <ul className='list-disc space-y-4 ml-5 text-lg'>
           {summaryPoints.map((point, index) => (

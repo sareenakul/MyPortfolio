@@ -22,13 +22,13 @@ const WorkExperience: React.FC<Props> = (props) => {
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
         'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
       ],
-      startDate: 'Aug 2023',
+      startDate: 'Jun 2024',
       endDate: 'Present',
       summaryPoints: [
         'Developed user authentication using Firebase',
         'Error Handling',
         'Testing and Debugging',
-        'Followed sprint format for product development',
+        'Following Agile methodology',
       ],
     },
     // Add more experience objects here
@@ -42,8 +42,8 @@ const WorkExperience: React.FC<Props> = (props) => {
             'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
             'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
         ],
-        startDate: 'January 2021',
-        endDate: 'Present',
+        startDate: 'Sep 2023',
+        endDate: 'Apr 2024',
         summaryPoints: [
           'Assisted with lectures and labs',
           'Graded assignments and exams',
