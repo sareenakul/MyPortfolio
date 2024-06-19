@@ -40,7 +40,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         <p className='font-bold text-2xl mt-1 text-[wheat]'>{company}</p>
         <div className='flex space-x-2 my-2'>
           {technologies.map((tech, index) => (
-            <img key={index} className='h-10 w-10 rounded-full' src={tech} alt={`tech-${index}`} />
+            <Image key={index} className='h-10 w-10 rounded-full' src={tech} alt={`tech-${index}`} />
           ))}
         </div>
         <p className='uppercase py-5 text-gray-300'>
