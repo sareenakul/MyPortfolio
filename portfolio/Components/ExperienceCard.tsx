@@ -7,7 +7,7 @@ type ExperienceCardProps = {
   title: string;
   company: string;
   companyLogo: StaticImageData;
-  technologies: string[];
+  technologies: { src: string, width: number, height: number }[];
   startDate: string;
   endDate: string;
   summaryPoints: string[];
@@ -32,6 +32,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
     >
       <Image
         src={companyLogo}
+        width={128}  // Adjust the width
+        height={128}  // Adjust the height
         alt='companyLogo'
         className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center'
       />

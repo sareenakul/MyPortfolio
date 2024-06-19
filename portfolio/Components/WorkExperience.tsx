@@ -7,7 +7,8 @@ import ghLogo from "../public/ghLogo.png";
 
 
 
-type Props = {};
+type Props = {
+};
 
 const WorkExperience: React.FC<Props> = (props) => {
 
@@ -17,10 +18,26 @@ const WorkExperience: React.FC<Props> = (props) => {
       company: 'GramerHub',
       companyLogo: ghLogo,
       technologies: [
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original-wordmark.svg",
-        'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-        'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original-wordmark.svg",
+          width: 50,
+          height: 50
+        },
+        {
+          src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+          width: 50,
+          height: 50
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+          width: 50,
+          height: 50
+        },
+        {
+          src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+          width: 50,
+          height: 50
+        },
       ],
       startDate: 'Jun 2024',
       endDate: 'Present',
@@ -37,10 +54,26 @@ const WorkExperience: React.FC<Props> = (props) => {
         company: 'InfiniGuard | York University C-4 Partnership',
         companyLogo: c4,
         technologies: [
-            'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
-            'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
-            'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
-            'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+          {
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+            width: 50,
+            height: 50
+          },
+          {
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
+            width: 50,
+            height: 50
+          },
+          {
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+            width: 50,
+            height: 50
+          },
+          {
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+            width: 50,
+            height: 50
+          },
         ],
         startDate: 'Sep 2023',
         endDate: 'Apr 2024',
@@ -57,10 +90,26 @@ const WorkExperience: React.FC<Props> = (props) => {
         company: 'Excel Lassonde',
         companyLogo: excel,
         technologies: [
-          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg',
-          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
-          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
-          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+          {
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg',
+            width: 50,
+            height: 50
+          },
+          {
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+            width: 50,
+            height: 50
+          },
+          {
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
+            width: 50,
+            height: 50
+          },
+          {
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+            width: 50,
+            height: 50
+          },
         ],
         startDate: 'Aug 2023',
         endDate: 'Present',
