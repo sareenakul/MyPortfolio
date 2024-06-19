@@ -26,7 +26,7 @@ const Contact = (props: Props) => {
             <div className='flex flex-col space-y-5 sm:space-y-10 pt-[8rem] sm:pt-[10rem]'>
                 <div className='text-2xl sm:text-4xl font-semibold text-center'>
                     <h4>I have got what you need.{" "}
-                        <span className='decoration-[#F7AB0A]/50 underline'>Let`&apos;`s Connect</span>
+                        <span className='decoration-[#F7AB0A]/50 underline'>Let&apos;s Connect</span>
                     </h4>
 
                     <div className='mt-5 sm:mt-[1rem] mb-5 sm:mb-[2rem] space-y-5'>

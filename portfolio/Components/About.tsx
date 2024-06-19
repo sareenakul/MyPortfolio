@@ -42,7 +42,7 @@ const About = (props: Props) => {
                     <ScrollText words={words} st={start} />
                 </h4>
                 <p className=" border-[#3b3a3a] rounded-[1rem] text-center border-[3px] p-[1px] border-solid-[white] text-sm sm:text-base text-[wheat]">
-                    I`&apos;`m Akul. Mostly known for my infamous Canadian vlogs on MedleyDiaries. At the moment, I am pursuing my 3rd year at York University in 
+                    I&apos;m Akul. Mostly known for my infamous Canadian vlogs on MedleyDiaries. At the moment, I am pursuing my 3rd year at York University in 
                     Bachelor of Science with Specialized Honours in Computer Science. Ever since my degree began, I had little to no idea as what all domains
                     would I be able to explore in the field of Computer Science. I was lucky enough to try my hands on Frontend Development at first, that sent
                     me on a stive to make several web-projects and increase my horizon of skills. I mastered Reactjs and upgraded to Nextjs. I prefer to work on the MVC 
@@ -53,7 +53,7 @@ const About = (props: Props) => {
                     Further, I plan to learn IOS App Development, polishing through Objective C and Swift language. I believe, it is crutial to switch towards mobile 
                     application development. Since, this niche is not as saturated as web development is at the moment. In my perspective, MERN Stack has actually given
                     me the confidence to keep exploring different tech stacks and growing. I believe in inclusivity and team spirit. My favourite saying goes without waste
-                    `&quot;`Everyday is to learn something new!`&quot;`
+                    &quot;Everyday is to learn something new!&quot;
                 </p>
             </div>
         </motion.div>
