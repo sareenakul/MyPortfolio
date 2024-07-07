@@ -28,10 +28,6 @@ export default function Home() {
       <section id="hero" className="snap-center">
         <Hero/>
       </section>
-      <div>
-      <audio autoPlay loop src="../public/mus.mp3"></audio>
-      </div>
-
 
       {/* About */}
       <section id="about" className="snap-start">
