@@ -135,7 +135,7 @@ const Projects: React.FC<Props> = (props) => {
         ))}
       </div>
       <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-4">
+      <div className="absolute bottom-10 left-1/2 p-[37rem] transform -translate-x-1/2 flex space-x-4">
         <button onClick={handlePrevClick} className="px-4 py-2 bg-gray-700 text-white rounded-md">Prev</button>
         <button onClick={handleNextClick} className="px-4 py-2 bg-gray-700 text-white rounded-md">Next</button>
       </div>
