@@ -71,6 +71,11 @@ const Hero = (props: Props) => {
                     <Link href="#projects">
                         <button className='heroButton'>Projects</button>
                     </Link>
+                    <div className='flex justify-center mt-[1rem]'>
+                        <Link href="/resume.pdf" passHref>
+                            <button className='heroResume'>Resume</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
