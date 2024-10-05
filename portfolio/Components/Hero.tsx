@@ -44,13 +44,13 @@ const Hero = (props: Props) => {
     }, [images.length]);
 
     return (
-        <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden object-cover'>
+        <div className='h-[110vh] flex flex-col space-y-4 sm:space-y-8 items-center justify-center text-center overflow-hidden'>
             <BackgroundCircles />
-            <div className={`relative rounded-full h-32 w-32 mx-auto ${animating ? 'image-transition' : ''}`}>
+            <div className={`relative rounded-full h-24 w-24 sm:h-32 sm:w-32 mx-auto ${animating ? 'image-transition' : ''}`}>
                 <Image src={images[currentImage]} alt='me' layout='fill' objectFit='cover' className='rounded-full' />
             </div>
-            <div className='z-20'>
-                <h2 className='text-sm uppercase text-gray-400 pb-2 tracking-[15px]'>Software Developer</h2>
+            <div className='z-20 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl'>
+                <h2 className='text-xs sm:text-sm uppercase text-gray-400 pb-2 tracking-[10px] sm:tracking-[15px]'>Software Developer</h2>
                 {/* <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
                     <span className='mr-3'>Hi, I'm a{text}</span>
                     <Cursor cursorColor='orange'/>
@@ -58,7 +58,8 @@ const Hero = (props: Props) => {
                 <div className=''>
                     <ScrollText words={descps} st = {st}/>
                 </div>
-                <div className=' mt-[2rem]'>
+                <div className='mt-4 sm:mt-8'>
+                    <div className='flex flex-wrap justify-center gap-2 sm:gap-4'>
                     <Link href="#about">
                         <button className='heroButton'>About</button>
                     </Link>
@@ -71,6 +72,7 @@ const Hero = (props: Props) => {
                     <Link href="#projects">
                         <button className='heroButton'>Projects</button>
                     </Link>
+                </div>
                     <div className='flex justify-center mt-[1rem]'>
                         <Link href="/resume.pdf" passHref>
                             <button className='heroResume'>Resume</button>
