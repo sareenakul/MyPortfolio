@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
-import Dot from './Dot';
-const portPhoto = require('../public/portPhoto.png');
-const mdImage = require('../public/mDimage.png');
+import Image from 'next/image';
 
 type Props = {};
 
@@ -53,32 +51,43 @@ const Projects: React.FC<Props> = (props) => {
   ];
 
   const containerRef = useRef<HTMLDivElement>(null);
-  const [clickedIndex, setClickedIndex] = useState<number | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [clickedIndex, setClickedIndex] = useState<number | null>(null);
 
   const handlePrevClick = () => {
-    setCurrentIndex((prevIndex) => prevIndex - 1 < 0 ? projects.length - 1 : prevIndex - 1);
+    setCurrentIndex((prevIndex) => {
+      const newIndex = prevIndex - 1;
+      return newIndex < 0 ? projects.length - 1 : newIndex;
+    });
+    setClickedIndex(null);
   };
   
   const handleNextClick = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
+    setClickedIndex(null);
   };
   
-  
-
-  
+  useEffect(() => {
+    if (containerRef.current) {
+      const scrollWidth = containerRef.current.scrollWidth / projects.length;
+      containerRef.current.scrollTo({
+        left: currentIndex * scrollWidth,
+        behavior: 'smooth'
+      });
+    }
+  }, [currentIndex, projects.length]);
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 3 }}
-      className="h-screen flex relative flex-col text-left overflow-hidden md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+      className="h-screen relative flex flex-col text-left overflow-hidden md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
-      <div ref={containerRef} className="mt-20 relative flex w-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div ref={containerRef} className="mt-20 relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects.map((project, index) => (
           <div key={index} className="w-screen flex-shrink-0 snap-center flex flex-col md:flex-row space-y-5 md:space-y-0 items-center justify-center p-5 pb-0 md:p-20 h-screen">
             <div 
@@ -110,7 +119,9 @@ const Projects: React.FC<Props> = (props) => {
             <div className="space-y-2 px-0 md:px-10 max-w-4xl text-center md:text-left">
               <h4 className="text-3xl md:text-4xl font-semibold flex items-center">
                 {project.title} 
-                <a href={project.webURL} target='_blank' className="text-gray-500 text-sm ml-2">↗</a>
+                {project.webURL && (
+                  <a href={project.webURL} target='_blank' rel="noopener noreferrer" className="text-gray-500 text-sm ml-2">↗</a>
+                )}
                 <div className="ml-4 text-gray-500 hover:text-gray-900">
                   <SocialIcon url={project.githubLink} fgColor="white" bgColor="black" style={{ height: 30, width: 30 }} />
                 </div>
@@ -120,26 +131,32 @@ const Projects: React.FC<Props> = (props) => {
                   <p className="text-sm md:text-lg" key={index}>{line}</p>
                 ))}
               </div>
-              <div className="flex space-x-2 justify-center md:justify-start">
+              <div className="flex flex-wrap space-x-2 justify-center md:justify-start">
                 {project.technologies.map((tech, i) => (
-                  <span key={i} className="px-2 py-1 bg-gray-700 text-gray-100 rounded-md text-xs md:text-sm">
+                  <span key={i} className="px-2 py-1 bg-gray-700 text-gray-100 rounded-md text-xs md:text-sm mb-2">
                     {tech}
                   </span>
                 ))}
-              </div>
-              <div className="flex space-x-2 justify-center md:justify-start">
-                {/* <Dot currentIndex={currentIndex} totalProjects={projects.length} /> */}
               </div>
             </div>
           </div>
         ))}
       </div>
       <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
-      <div className="absolute bottom-10 left-1/2 p-[37rem] transform -translate-x-1/2 flex space-x-4">
-        <button onClick={handlePrevClick} className="px-4 py-2 bg-gray-700 text-white rounded-md">Prev</button>
-        <button onClick={handleNextClick} className="px-4 py-2 bg-gray-700 text-white rounded-md">Next</button>
+      <div className="absolute bottom-10 left-0 right-0 flex justify-center space-x-4 z-30">
+        <button 
+          onClick={handlePrevClick} 
+          className="px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
+        >
+          Prev
+        </button>
+        <button 
+          onClick={handleNextClick} 
+          className="px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
+        >
+          Next
+        </button>
       </div>
-      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
     </motion.div>
   );
 };
