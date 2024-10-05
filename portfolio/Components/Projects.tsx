@@ -84,14 +84,14 @@ const Projects: React.FC<Props> = (props) => {
       transition={{ duration: 3 }}
       className="h-screen relative flex flex-col text-left overflow-hidden md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-16 sm:top-24 uppercase tracking-[10px] sm:tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
-      <div ref={containerRef} className="mt-20 relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div ref={containerRef} className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects.map((project, index) => (
-          <div key={index} className="w-screen flex-shrink-0 snap-center flex flex-col md:flex-row space-y-5 md:space-y-0 items-center justify-center p-5 pb-0 md:p-20 h-screen">
+          <div key={index} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-start p-5 sm:p-10 md:p-20 h-screen">
             <div 
-              className="w-full md:w-1/2 h-auto rounded-md relative"
+              className="w-full max-w-lg md:max-w-xl lg:max-w-2xl h-auto rounded-md relative mt-16 sm:mt-20"
               onClick={() => setClickedIndex(index)}
             >
               {clickedIndex === index ? (
@@ -110,14 +110,14 @@ const Projects: React.FC<Props> = (props) => {
                   initial={{ opacity: 0, y: -300 }}
                   transition={{ duration: 1 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="w-full h-full rounded-md cursor-pointer"
+                  className="w-full h-full rounded-md cursor-pointer object-contain"
                   src={project.imageUrl}
                   alt={project.title}
                 />
               )}
             </div>
-            <div className="space-y-2 px-0 md:px-10 max-w-4xl text-center md:text-left">
-              <h4 className="text-3xl md:text-4xl font-semibold flex items-center">
+            <div className="space-y-4 px-0 md:px-10 max-w-4xl text-center">
+              <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold flex items-center justify-center">
                 {project.title} 
                 {project.webURL && (
                   <a href={project.webURL} target='_blank' rel="noopener noreferrer" className="text-gray-500 text-sm ml-2">↗</a>
@@ -128,12 +128,12 @@ const Projects: React.FC<Props> = (props) => {
               </h4>
               <div>
                 {project.description.split('\n').map((line, index) => (
-                  <p className="text-sm md:text-lg" key={index}>{line}</p>
+                  <p className="text-sm sm:text-base" key={index}>{line}</p>
                 ))}
               </div>
-              <div className="flex flex-wrap space-x-2 justify-center md:justify-start">
+              <div className="flex flex-wrap justify-center">
                 {project.technologies.map((tech, i) => (
-                  <span key={i} className="px-2 py-1 bg-gray-700 text-gray-100 rounded-md text-xs md:text-sm mb-2">
+                  <span key={i} className="px-2 py-1 bg-gray-700 text-gray-100 rounded-md text-xs sm:text-sm m-1">
                     {tech}
                   </span>
                 ))}
@@ -146,13 +146,13 @@ const Projects: React.FC<Props> = (props) => {
       <div className="absolute bottom-10 left-0 right-0 flex justify-center space-x-4 z-30">
         <button 
           onClick={handlePrevClick} 
-          className="px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
+          className="px-3 py-1 sm:px-4 sm:py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 text-sm sm:text-base"
         >
           Prev
         </button>
         <button 
           onClick={handleNextClick} 
-          className="px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
+          className="px-3 py-1 sm:px-4 sm:py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 text-sm sm:text-base"
         >
           Next
         </button>
