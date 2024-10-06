@@ -44,7 +44,7 @@ const Hero = (props: Props) => {
     }, [images.length]);
 
     return (
-        <div className='h-[110vh] flex flex-col space-y-4 sm:space-y-8 items-center justify-center text-center overflow-hidden'>
+        <div className='h-screen flex flex-col space-y-4 sm:space-y-8 items-center justify-center text-center overflow-hidden'>
             <BackgroundCircles />
             <div className={`relative rounded-full h-24 w-24 sm:h-32 sm:w-32 mx-auto ${animating ? 'image-transition' : ''}`}>
                 <Image src={images[currentImage]} alt='me' layout='fill' objectFit='cover' className='rounded-full' />
@@ -59,7 +59,7 @@ const Hero = (props: Props) => {
                     <ScrollText words={descps} st = {st}/>
                 </div>
                 <div className='mt-4 sm:mt-8'>
-                    <div className='flex flex-wrap justify-center gap-2 sm:gap-4'>
+                    <div className='flex'>
                     <Link href="#about">
                         <button className='heroButton'>About</button>
                     </Link>

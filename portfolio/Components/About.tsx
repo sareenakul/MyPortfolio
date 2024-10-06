@@ -19,7 +19,7 @@ const About = (props: Props) => {
             transition={{ duration: 1.5 }}
             className="flex flex-col relative min-h-screen py-24 sm:py-32 text-center md:text-left md:flex-row max-w-7xl px-5 sm:px-10 justify-evenly mx-auto items-center"
         >
-            <h3 className="absolute top-10 sm:top-20 uppercase tracking-[20px] text-gray-500 text-xl sm:text-2xl">
+            <h3 className="absolute top-24 sm:top-28 md:top-32 uppercase tracking-[20px] text-gray-500 text-xl sm:text-2xl">
                 About
             </h3>
             <div className="flex-shrink-0 mt-16 sm:mt-0">

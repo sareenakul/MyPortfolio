@@ -84,7 +84,7 @@ const Projects: React.FC<Props> = (props) => {
       transition={{ duration: 3 }}
       className="h-screen relative flex flex-col text-left overflow-hidden md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
-      <h3 className="absolute top-16 sm:top-24 uppercase tracking-[10px] sm:tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-16 sm:top-24 uppercase tracking-[8px] sm:tracking-[14px] md:tracking-[20px] text-gray-500 text-xl sm:text-2xl">
         Projects
       </h3>
       <div ref={containerRef} className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
