@@ -116,7 +116,7 @@ const Projects: React.FC<Props> = (props) => {
                 />
               )}
             </div>
-            <div className="space-y-4 px-0 md:px-10 max-w-4xl text-center">
+            <div className="space-y-4 px-0 md:px-10 max-w-4xl text-center mb-16 sm:mb-20 md:mb-24 lg:mb-28">
               <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold flex items-center justify-center">
                 {project.title} 
                 {project.webURL && (
@@ -143,16 +143,16 @@ const Projects: React.FC<Props> = (props) => {
         ))}
       </div>
       <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
-      <div className="absolute bottom-10 left-0 right-0 flex justify-center space-x-4 z-30">
+      <div className="absolute bottom-5 left-0 right-0 flex justify-center space-x-4 z-30">
         <button 
           onClick={handlePrevClick} 
-          className="px-3 py-1 sm:px-4 sm:py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 text-sm sm:text-base"
+          className="px-6 py-3 sm:px-4 sm:py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 text-sm sm:text-base"
         >
           Prev
         </button>
         <button 
           onClick={handleNextClick} 
-          className="px-3 py-1 sm:px-4 sm:py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 text-sm sm:text-base"
+          className="px-6 py-3 sm:px-4 sm:py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 text-sm sm:text-base"
         >
           Next
         </button>
@@ -160,5 +160,6 @@ const Projects: React.FC<Props> = (props) => {
     </motion.div>
   );
 };
+
 
 export default Projects;

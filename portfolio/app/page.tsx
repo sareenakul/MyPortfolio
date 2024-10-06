@@ -55,7 +55,7 @@ export default function Home() {
       </section>
 
       <Link href="#hero">
-      <footer className="sticky bottom-5 w-full cursor-pointer">
+      <footer className="sticky bottom-5 w-[5%] cursor-pointer">
         <div className="flex">
           <HomeIcon className="h-10 w-10 text-gray-500 hover:text-[#F7AB0A] transition-colors duration-300 ease-in-out transform hover:scale-110" />
         </div>
