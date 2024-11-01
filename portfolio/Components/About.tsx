@@ -19,9 +19,10 @@ const About = (props: Props) => {
             transition={{ duration: 1.5 }}
             className="flex flex-col relative min-h-screen py-24 sm:py-32 text-center md:text-left md:flex-row max-w-7xl px-5 sm:px-10 justify-evenly mx-auto items-center"
         >
-            <h3 className="absolute top-24 sm:top-28 md:top-32 uppercase tracking-[20px] text-gray-500 text-xl sm:text-2xl">
+            <h3 className="absolute pb-[1rem] top-24 sm:top-28 md:top-32 uppercase tracking-[20px] text-gray-500 text-xl sm:text-2xl">
                 About
             </h3>
+            <div className='flex align-center'>
             <div className="flex-shrink-0 mt-16 sm:mt-0">
                 <motion.div 
                     initial={{ x: -200, opacity: 0 }}
@@ -59,6 +60,7 @@ const About = (props: Props) => {
                     me the confidence to keep exploring different tech stacks and growing. I believe in inclusivity and team spirit. My favourite saying goes without waste
                     &quot;Everyday is to learn something new!&quot;
                 </p>
+            </div>
             </div>
         </motion.div>
     )
