@@ -10,6 +10,9 @@ import WorkExperience from "@/Components/WorkExperience";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import getSpeedInsights from '@vercel/speed-insights';
+
+
 import { HomeIcon } from "@heroicons/react/16/solid";
 
 
