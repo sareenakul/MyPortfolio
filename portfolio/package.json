@@ -9,6 +9,9 @@
     "lint": "next lint",
     "vercel-build": "next build"
   },
+  "engines": {
+  "node": ">=16.8.0"
+},
   "dependencies": {
     "@heroicons/react": "^2.1.3",
     "@react-spring/web": "^9.7.3",
@@ -26,7 +29,6 @@
   },
   "devDependencies": {
     "@types/node": "^20",
-    "next": "^14.2.3",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
