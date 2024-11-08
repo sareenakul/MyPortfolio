@@ -36,7 +36,7 @@ const Skills = (props: Props) => {
         <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Skills</h3>
         <h3 className='absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm'>Hover over skill for current proficiency</h3>
         <div className='pt-36 grid grid-cols-4 gap-5'>
-          {skills.map((skill, index) => {
+          {skills?.slice(0, skills.length/2).map((skill, index) => {
             const rowNumber = getRowNumber(index, 4);
             const direction = rowNumber % 2 === 0 ? -100 : 100;
             return (
@@ -47,6 +47,21 @@ const Skills = (props: Props) => {
                 transition={{ duration: 2 }}
               >
                 <Skill icon={skill.icon} proficiency={skill.proficiency} />
+              </motion.div>
+            );
+          })}
+
+          {skills?.slice(skills.length / 2, skills.length).map((skill, index) => {
+            const rowNumber = getRowNumber(index, 4);
+            const direction = rowNumber % 2 === 0 ? -100 : 100;
+            return (
+              <motion.div
+                key={index}
+                initial={{ x: direction, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 2 }}
+              >
+                <Skill icon={skill.icon} proficiency={skill.proficiency} directionLeft />
               </motion.div>
             );
           })}
