@@ -8,7 +8,7 @@ frontend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: build # or dist, depending on your build output directory
+    baseDirectory: .next # or dist, depending on your build output directory
     files:
       - '**/*'
   cache:
