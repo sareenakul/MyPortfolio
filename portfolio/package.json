@@ -7,8 +7,8 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "lint": "next lint",
-    "vercel-build": "npm run vercel-build"
+    "lint": "next lint"
+    
   },
   "engines": {
     "node": ">=18.18.0"
