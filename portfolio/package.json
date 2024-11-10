@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -21,7 +22,7 @@
     "next": "^15.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-hook-form": "^7.51.5",
+    "react-hook-form": "^7.53.2",
     "react-simple-typewriter": "^5.0.1",
     "react-social-icons": "^6.16.0",
     "sass": "^1.80.6",
