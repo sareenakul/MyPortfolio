@@ -1,16 +1,19 @@
-// /** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */
 
-// const nextConfig = {
-    
-// };
+const nextConfig = {
+    output: 'export',
+    images: {
+        unoptimized: true, // Disable Image Optimization API for static export
+    },
+};
 
-// export default nextConfig;
+export default nextConfig;
 
 
 // next.config.js
-const nextConfig = {
-    output: 'export',
-};
-export default nextConfig;
-module.exports = nextConfig;
+// const nextConfig = {
+//     output: 'export',
+// };
+// export default nextConfig;
+// module.exports = nextConfig;
   
