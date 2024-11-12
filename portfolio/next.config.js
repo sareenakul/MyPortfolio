@@ -5,15 +5,11 @@ const nextConfig = {
     images: {
         unoptimized: true, // Disable Image Optimization API for static export
     },
+    trailingSlash: true,
 };
 
 export default nextConfig;
 
 
-// next.config.js
-// const nextConfig = {
-//     output: 'export',
-// };
-// export default nextConfig;
-// module.exports = nextConfig;
+
   

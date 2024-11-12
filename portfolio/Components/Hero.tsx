@@ -7,6 +7,7 @@ import two from "../public/photosMe/hero2.jpg";
 import six from "../public/photosMe/hero6.jpg";
 import seven from "../public/photosMe/hero7.jpg";
 import ScrollText from './ScrollText';
+import "./scroll.scss";
 import im1 from "../public/imAkul/im1.png";
 import im2 from "../public/imAkul/im2.png";
 import im3 from "../public/imAkul/im3.png";
