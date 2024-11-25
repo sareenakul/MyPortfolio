@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import "../app/globals.css";
 
 type Props = {};
 
@@ -87,7 +87,7 @@ const Projects: React.FC<Props> = (props) => {
       <h3 className="absolute top-16 sm:top-24 uppercase tracking-[8px] sm:tracking-[14px] md:tracking-[20px] text-gray-500 text-xl sm:text-2xl">
         Projects
       </h3>
-      <div ref={containerRef} className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div ref={containerRef} className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects.map((project, index) => (
           <div key={index} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-start p-5 sm:p-10 md:p-20 h-screen">
             <div 

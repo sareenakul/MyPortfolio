@@ -3,9 +3,6 @@ import BackgroundCircles from './BackgroundCircles';
 import akul from "../public/Akul.jpeg";
 import Image from 'next/image';
 import Link from 'next/link';
-import two from "../public/photosMe/hero2.jpg";
-import six from "../public/photosMe/hero6.jpg";
-import seven from "../public/photosMe/hero7.jpg";
 import ScrollText from './ScrollText';
 import "./scroll.scss";
 import im1 from "../public/imAkul/im1.png";
@@ -18,14 +15,6 @@ import im6 from "../public/imAkul/im6.png";
 type Props = {}
 
 const Hero = (props: Props) => {
-    // const [text, count] = useTypewriter({
-    //     words: ["kul",
-    //     " Web-Developer",
-    //     " Problem Solver",
-    //     " <Coder>"],
-    //     loop: true,
-    //     delaySpeed: 100,
-    // });
 
     const descps = ["kul Sareen", "daptive","stute"," <Coder>"];
     const st = "Hi, I'm a"
