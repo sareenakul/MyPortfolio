@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap"); */
 
 
 :root {
@@ -38,16 +38,65 @@ body {
 
 @layer components {
   .heroButton {
-    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#f7AB0A]/40 hover:text-[#f7AB0A]/40;
+    /* Replaced @apply with direct CSS properties */
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem; /* px-6 */
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+    border: 1px solid #242424;
+    border-radius: 9999px; /* rounded-full */
+    text-transform: uppercase; /* uppercase */
+    font-size: 0.75rem; /* text-xs */
+    letter-spacing: 0.1em; /* tracking-widest */
+    color: #6b7280; /* text-gray-500 */
+    transition: all 0.2s; /* transition-all */
   }
+
 
   .heroResume {
-    @apply px-6 py-2 border border-[#f2ad1ad0] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#f7AB0A]/40 hover:text-[#f7AB0A]/40;
+    /* Replaced @apply with direct CSS properties */
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem; /* px-6 */
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+    border: 1px solid #f2ad1ad0; /* border */
+    border-radius: 9999px; /* rounded-full */
+    text-transform: uppercase; /* uppercase */
+    font-size: 0.75rem; /* text-xs */
+    letter-spacing: 0.1em; /* tracking-widest */
+    color: #6b7280; /* text-gray-500 */
+    transition: all 0.2s; /* transition-all */
+    /* Hover states */
+    &:hover {
+      border-color: #f7AB0A; /* hover:border-[#f7AB0A]/40 */
+      color: #f7AB0A; /* hover:text-[#f7AB0A]/40 */
+    }
   }
 
-  .contactInput{
-    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#f7AB0A]/40 focus:text-[#f7AB0A]/40
-    hover:border-[#F7AB0A]/40 font-bold text-lg;
+  .contactInput {
+    /* Replaced @apply with direct CSS properties */
+    outline: none; /* outline-none */
+    background: rgba(156, 163, 175, 0.1); /* bg-slate-400/10 */
+    border-radius: 0.125rem; /* rounded-sm */
+    border-bottom: 1px solid #242424; /* border-b */
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem; /* px-6 */
+    padding-top: 1rem; /* py-4 */
+    padding-bottom: 1rem; /* py-4 */
+    color: #6b7280; /* text-gray-500 */
+    placeholder-color: #6b7280; /* placeholder-gray-500 */
+    transition: all 0.2s; /* transition-all */
+    font-weight: bold; /* font-bold */
+    font-size: 1.125rem; /* text-lg */
+  }
+
+  .contactInput:focus {
+    border-color: #f7AB0A; /* focus:border-[#f7AB0A]/40 */
+    color: #f7AB0A; /* focus:text-[#f7AB0A]/40 */
+  }
+
+  .contactInput:hover {
+    border-color: #F7AB0A; /* hover:border-[#F7AB0A]/40 */
   }
 }
 
