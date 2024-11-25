@@ -48,7 +48,7 @@ const Hero = (props: Props) => {
         <div className='h-screen flex flex-col space-y-4 sm:space-y-8 items-center justify-center text-center overflow-hidden'>
             <BackgroundCircles />
             <div className={`relative rounded-full h-24 w-24 sm:h-32 sm:w-32 mx-auto ${animating ? 'image-transition' : ''}`}>
-                <Image src={images[currentImage]} alt='me' layout='fill' style={{objectFit: 'cover'}} className='rounded-full' />
+                <Image src={images[currentImage]} alt='me' fill style={{objectFit: 'cover'}} className='rounded-full' />
             </div>
             <div className='z-20 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl'>
                 <h2 className='text-xs sm:text-sm uppercase text-gray-400 pb-2 tracking-[10px] sm:tracking-[15px]'>Software Developer</h2>
