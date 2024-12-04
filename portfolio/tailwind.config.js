@@ -2,7 +2,8 @@
 export default {
   //works
   content: [
-    "./components/**/*.{js,ts,jsx,tsx,mdx,css,scss}",
+    "./",
+    "./Components/**/*.{js,ts,jsx,tsx,mdx,css,scss}",
     "./app/**/*.{js,ts,jsx,tsx,mdx,css}",
     "./public/**/*.html",
   ],
