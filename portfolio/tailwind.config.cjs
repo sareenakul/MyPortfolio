@@ -15,7 +15,7 @@ const config = {
     },
   },
   plugins: [
-    require('tailwind-scrollbar'),
+    require('tailwindcss'),
   ],
 };
 
