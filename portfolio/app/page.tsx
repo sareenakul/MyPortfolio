@@ -7,7 +7,7 @@ import Hero from "@/Components/Hero";
 import Projects from "@/Components/Projects";
 import Skills from "@/Components/Skills";
 import WorkExperience from "@/Components/WorkExperience";
-import "./globals.css";
+import "../app/globals.css";
 // import Image from "next/image";
 
 import Link from "next/link";
