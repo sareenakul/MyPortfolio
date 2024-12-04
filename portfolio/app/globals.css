@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 
 :root {
@@ -20,14 +21,6 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgb(var(--background-end-rgb))
-  ) rgb(var(--background-start-rgb));
-}
-
 
 @layer utilities {
   .text-balance {
@@ -52,21 +45,28 @@ body {
     transition: all 0.2s; /* transition-all */
   }
 
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  ) rgb(var(--background-start-rgb));
+}
+
+
 
   .heroResume {
-    /* Replaced @apply with direct CSS properties */
-    padding-left: 1.5rem; /* px-6 */
-    padding-right: 1.5rem; /* px-6 */
-    padding-top: 0.5rem; /* py-2 */
-    padding-bottom: 0.5rem; /* py-2 */
-    border: 1px solid #f2ad1ad0; /* border */
-    border-radius: 9999px; /* rounded-full */
-    text-transform: uppercase; /* uppercase */
-    font-size: 0.75rem; /* text-xs */
-    letter-spacing: 0.1em; /* tracking-widest */
-    color: #6b7280; /* text-gray-500 */
-    transition: all 0.2s; /* transition-all */
-    /* Hover states */
+    padding-left: 1.5rem; 
+    padding-right: 1.5rem; 
+    padding-top: 0.5rem; 
+    padding-bottom: 0.5rem; 
+    border: 1px solid #f2ad1ad0;
+    border-radius: 9999px; 
+    text-transform: uppercase; 
+    font-size: 0.75rem; 
+    letter-spacing: 0.1em; 
+    color: #6b7280; 
+    transition: all 0.2s; 
   }
   .heroResume:hover {
     border-color: #f7AB0A; /* hover:border-[#f7AB0A]/40 */
@@ -107,6 +107,7 @@ body {
 .image-transition {
   animation: pop-up 1s ease-in-out;
 }
+
 
 @keyframes pop-up {
   0% {

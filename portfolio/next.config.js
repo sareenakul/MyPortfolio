@@ -8,8 +8,8 @@ const nextConfig = {
         unoptimized: true,
     },
     trailingSlash: true,
-    basePath: '/portfolio',
-    assetPrefix: '/portfolio/public',
+    // basePath: '/portfolio',
+    // assetPrefix: '/portfolio/public',
 };
 
 

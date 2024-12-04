@@ -41,9 +41,7 @@ const About = (props: Props) => {
             </div>
 
             <div className="space-y-4 sm:space-y-6 px-2 sm:px-6 md:px-10 mt-6 sm:mt-8 md:mt-0 flex-1">
-                <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold"
-                //className="mt-[5rem] sm:mt-[7rem] text-2xl sm:text-4xl font-semibold"
-                >
+                <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
                     <ScrollText words={words} st={start} />
                 </h4>
                 <p className=" border-[#3b3a3a] rounded-lg text-center border-2 p-3 sm:p-4 text-xs sm:text-sm md:text-base text-[wheat]">
