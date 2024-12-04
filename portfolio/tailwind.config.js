@@ -33,17 +33,17 @@
 //   ],
 // }
 
-
-module.exports = {
-  mode: 'jit',
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./public/**/*.html",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
+//Not working for deployment
+// module.exports = {
+//   mode: 'jit',
+//   content: [
+//     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+//     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+//     "./public/**/*.html",
+//   ],
+//   theme: {
+//     extend: {},
+//   },
+//   plugins: [],
+// };
 
