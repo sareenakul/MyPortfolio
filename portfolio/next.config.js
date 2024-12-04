@@ -8,7 +8,7 @@ const nextConfig = {
         unoptimized: true, // Disable Image Optimization API for static export
     },
     trailingSlash: true,
-    basePath: '/MyPortfolio/portfolio',
+    basePath: '/portfolio',
 };
 
 
