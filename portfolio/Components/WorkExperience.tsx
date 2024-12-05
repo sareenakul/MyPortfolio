@@ -14,40 +14,42 @@ type Props = {
 const WorkExperience: React.FC<Props> = (props) => {
 
   const experiences = [
-    // {
-    //   title: 'Engineering Intern',
-    //   company: 'Reefers Technologies Inc.',
-    //   companyLogo: reefers,
-    //   technologies: [
-    //     {
-    //       src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
-    //       width: 50,
-    //       height: 50
-    //     },
-    //     {
-    //       src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
-    //       width: 50,
-    //       height: 50
-    //     },
-    //     {
-    //       src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-    //       width: 50,
-    //       height: 50
-    //     },
-    //     {
-    //       src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
-    //       width: 50,
-    //       height: 50
-    //     },
-    //   ],
-    //   startDate: 'Jul 2024',
-    //   endDate: 'Sep 2024',
-    //   summaryPoints: [
-    //     ""
-    //   ],
-    // },
     {
-      title: 'Fullstack Developer',
+      title: 'Engineering Intern',
+      company: 'Reefers Technologies Inc.',
+      companyLogo: reefers,
+      logoWidth: 100,
+      logoHeight: 100,
+      technologies: [
+        {
+          src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+          width: 50,
+          height: 50
+        },
+        {
+          src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+          width: 50,
+          height: 50
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+          width: 50,
+          height: 50
+        },
+        {
+          src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+          width: 50,
+          height: 50
+        },
+      ],
+      startDate: 'Jul 2024',
+      endDate: 'Sep 2024',
+      summaryPoints: [
+        ""
+      ],
+    },
+    {
+      title: 'Freelance Developer',
       company: 'GramerHub',
       companyLogo: ghLogo,
       technologies: [
@@ -73,7 +75,7 @@ const WorkExperience: React.FC<Props> = (props) => {
         },
       ],
       startDate: 'Jun 2024',
-      endDate: 'Present',
+      endDate: 'Jul 2024',
       summaryPoints: [
         'Developed user authentication using Firebase',
         'Error Handling',
