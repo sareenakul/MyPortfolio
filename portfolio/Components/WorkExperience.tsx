@@ -18,8 +18,8 @@ const WorkExperience: React.FC<Props> = (props) => {
       title: 'Engineering Intern',
       company: 'Reefers Technologies Inc.',
       companyLogo: reefers,
-      logoWidth: 100,
-      logoHeight: 100,
+      logoWidth: 50,
+      logoHeight: 50,
       technologies: [
         {
           src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
@@ -49,9 +49,11 @@ const WorkExperience: React.FC<Props> = (props) => {
       ],
     },
     {
-      title: 'Freelance Developer',
+      title: 'Volunteer Developer',
       company: 'GramerHub',
       companyLogo: ghLogo,
+      logoWidth: 120,
+      logoHeight: 120,
       technologies: [
         {
           src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original-wordmark.svg",
@@ -88,6 +90,8 @@ const WorkExperience: React.FC<Props> = (props) => {
         title: 'Web Developer',
         company: 'InfiniGuard | York University C-4 Partnership',
         companyLogo: c4,
+        logoWidth: 120,
+        logoHeight: 120,
         technologies: [
           {
             src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
@@ -124,6 +128,8 @@ const WorkExperience: React.FC<Props> = (props) => {
         title: 'Teaching Assistant',
         company: 'Excel Lassonde',
         companyLogo: excel,
+        logoWidth: 120,
+        logoHeight: 120,
         technologies: [
           {
             src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg',
@@ -180,6 +186,8 @@ const WorkExperience: React.FC<Props> = (props) => {
             startDate={experience.startDate}
             endDate={experience.endDate}
             summaryPoints={experience.summaryPoints}
+            logoWidth = {experience.logoWidth}
+            logoHeight = {experience.logoHeight}
           />
         ))}
       </div>

@@ -11,6 +11,8 @@ type ExperienceCardProps = {
   startDate: string;
   endDate: string;
   summaryPoints: string[];
+  logoWidth: number;
+  logoHeight: number;
 };
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({
@@ -21,6 +23,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   startDate,
   endDate,
   summaryPoints,
+  logoWidth,
+  logoHeight,
 }) => {
   return (
     <motion.article
@@ -32,8 +36,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
     >
       <Image
         src={companyLogo}
-        width={128}  // Adjust the width
-        height={128}  // Adjust the height
+        width={logoWidth}  
+        height={logoHeight}
         alt='companyLogo'
         className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center'
       />
