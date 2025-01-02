@@ -53,10 +53,10 @@ const About = (props: Props) => {
                     than restful APIs. At the moment, I find myself working more on backend projects to polish my reasoning and Object-oriented style of programming. 
                 </p>
                 <p className="border-[#3b3a3a] rounded-lg text-center border-2 p-3 sm:p-4 text-xs sm:text-sm md:text-base text-[wheat]">
-                    Further, I plan to learn IOS App Development, polishing through Objective C and Swift language. I believe, it is crutial to switch towards mobile 
-                    application development. Since, this niche is not as saturated as web development is at the moment. In my perspective, MERN Stack has actually given
-                    me the confidence to keep exploring different tech stacks and growing. I believe in inclusivity and team spirit. My favourite saying goes without waste
+                Furthermore, I plan to learn iOS app development, focusing on Objective-C and Swift. I believe transitioning to mobile application development is crucial, as this niche is currently less saturated compared to web development. In my view, working with the MERN stack has given me the confidence to explore different tech stacks and continue growing. I strongly value inclusivity and team spirit. One of my favorite sayings is: 
+                <b className='text-white'>
                     &quot;Everyday is to learn something new!&quot;
+                </b>
                 </p>
             </div>
             </div>
