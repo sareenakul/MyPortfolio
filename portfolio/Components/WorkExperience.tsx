@@ -43,9 +43,12 @@ const WorkExperience: React.FC<Props> = (props) => {
         },
       ],
       startDate: 'Jul 2024',
-      endDate: 'Sep 2024',
+      endDate: 'Nov 2024',
       summaryPoints: [
-        ""
+        "Assisted in the design, development, and testing of web projects",
+        "Conducted research to improve efficiency and reduce deployment costs.",
+        "Created promotional materials, including brochures and presentations.",
+        "Worked closely with the CFO on budgeting, financial planning, and cost analysis of product deployment.",
       ],
     },
     {
