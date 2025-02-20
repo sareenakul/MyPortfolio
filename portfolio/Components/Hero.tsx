@@ -60,7 +60,8 @@ const Hero = (props: Props) => {
                     </Link>
                 </div>
                     <div className='flex justify-center mt-[1rem]'>
-                        <Link href="/Akul_Sareen_WebsiteResume.pdf" passHref>
+                        {/* <Link href="/Akul_Sareen_WebsiteResume.pdf" passHref> */}
+                        <Link href="/SareenA_Resume.pdf" passHref>
                             <button className='heroResume'>Resume</button>
                         </Link>
                     </div>
