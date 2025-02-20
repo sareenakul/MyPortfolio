@@ -89,6 +89,7 @@ const WorkExperience: React.FC<Props> = (props) => {
       ],
     },
     // Add more experience objects here
+    
     {
         title: 'Web Developer',
         company: 'InfiniGuard | York University C-4 Partnership',
@@ -156,7 +157,7 @@ const WorkExperience: React.FC<Props> = (props) => {
           },
         ],
         startDate: 'Aug 2023',
-        endDate: 'Present',
+        endDate: 'Aug 2024',
         summaryPoints: [
           'Assisted with lectures and labs',
           'Graded assignments and exams',
@@ -166,6 +167,23 @@ const WorkExperience: React.FC<Props> = (props) => {
         ],
       },
     // Add more experience objects here
+    {
+      title: 'Sales Associate',
+      company: 'LoveAndPeaceForAll',
+      companyLogo: "https://loveandpeaceforall.com/cdn/shop/files/LPFA-multicolor-logo-full_cb2609a3-dff5-4b20-b6ce-58fa729a38e5_180x@2x.png?v=1675801754",
+      logoWidth: 120,
+      logoHeight: 120,
+      technologies: [],
+      startDate: 'May 2022',
+      endDate: 'Aug 2022',
+      summaryPoints: [
+        'Achieved the sales through strong persuasion and customer engagement.',
+        'Built rapport with customers, effectively communicating to drive conversions.',
+        'Consistently met and exceeded sales targets in a competitive retail environment.',
+        'Demonstrated deep understanding of product offerings to provide tailored recommendations.',
+        'Efficiently managed the inventory, ensuring stock levels were maintained, restocked timely.',
+      ],
+    },
   ];
 
   return (

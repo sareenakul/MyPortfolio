@@ -16,7 +16,7 @@ type Props = {}
 
 const Hero = (props: Props) => {
 
-    const descps = ["kul Sareen", "daptive","stute"," <Coder>"];
+    const descps = ["kul Sareen", "nalytical", "daptive","gile"];
     const st = "Hi, I'm a"
     const images = [im1, im2, im3, im4, im5, im6, im5, im4, im3, im2, im1];
     const [currentImage, setCurrentImage] = useState(0);
