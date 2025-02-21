@@ -5,6 +5,7 @@ import excel from "../public/excel.png"; // Ensure this path is correct
 import c4 from "../public/c4.png";
 import ghLogo from "../public/ghLogo.png";
 import reefers from "../public/ReefersInc.png";
+import lapfa from "../public/LPFA-multicolor-logo-full_cb2609a3-dff5-4b20-b6ce-58fa729a38e5_180x@2x.webp"
 
 
 
@@ -170,7 +171,7 @@ const WorkExperience: React.FC<Props> = (props) => {
     {
       title: 'Sales Associate',
       company: 'LoveAndPeaceForAll',
-      companyLogo: "https://loveandpeaceforall.com/cdn/shop/files/LPFA-multicolor-logo-full_cb2609a3-dff5-4b20-b6ce-58fa729a38e5_180x@2x.png?v=1675801754",
+      companyLogo: lapfa,
       logoWidth: 120,
       logoHeight: 120,
       technologies: [],
